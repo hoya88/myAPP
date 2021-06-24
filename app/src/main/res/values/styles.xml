@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyCustomTabLayout"></style>
+
+    <style name="wrap_layout"></style>
+
+    <style name="single_layout"></style>
+
+    <style name="usertext"></style>
+
+    <style name="login_icon"></style>
+
+    <style name="img_arrow"></style>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="item_content" type="id" />
+    <item name="item_time" type="id" />
+    <item name="id_tab_list_img" type="id" />
+    <item name="id_tab_work_img" type="id" />
+    <item name="id_tab_punch_img" type="id" />
+    <item name="id_tab_list" type="id" />
+    <item name="id_tab_work" type="id" />
+    <item name="id_tab_punch" type="id" />
+    <item name="listview" type="id" />
+    <item name="delete" type="id" />
+    <item name="note_save" type="id" />
+    <item name="show" type="id" />
+    <item name="listview2" type="id" />
+</resources>
