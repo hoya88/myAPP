@@ -15,10 +15,10 @@ public class RecordActivity extends AppCompatActivity implements View.OnClickLis
     ImageView note_back;
     TextView note_time;
     EditText content;
-    ImageView delete;
-    ImageView note_save;
+    ImageButton delete;
+    ImageButton note_save;
     TextView noteName;;
-    private ListDBHelper mSQLiteHelper;
+    private ListDBHelper mListHelper;
     private String id;
 
     @Override
@@ -39,11 +39,11 @@ public class RecordActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     public void initData(){
-        mSQLiteHelper=new ListDBHelper(this);
+        mListHelper = new ListDBHelper(this);
         noteName.setText("添加记录");
-        Intent intent=getIntent();
+        Intent intent = getIntent();
         if(intent!=null){
-            id=intent.getStringExtra("id");
+            id = intent.getStringExtra("id");
             if(id!=null){
                 noteName.setText("修改记录");
                 content.setText(intent.getStringExtra("content"));
@@ -66,7 +66,7 @@ public class RecordActivity extends AppCompatActivity implements View.OnClickLis
                 if(id!=null){
                     //修改记录的功能
                     if(noteContent.length()>0){
-                        if (mSQLiteHelper.updateData(id,noteContent,DBUtils.getTime())){
+                        if (mListHelper.updateData(id,noteContent,DBUtils.getTime())){
                             showToast("修改成功");
                             setResult(2);
                             finish();
@@ -79,7 +79,7 @@ public class RecordActivity extends AppCompatActivity implements View.OnClickLis
                 }else{
                     //添加记录的功能
                     if(noteContent.length()>0){
-                        if (mSQLiteHelper.insertData(noteContent,DBUtils.getTime())){
+                        if (mListHelper.insertData(noteContent,DBUtils.getTime())){
                             showToast("保存成功");
                             setResult(2);
                             finish();

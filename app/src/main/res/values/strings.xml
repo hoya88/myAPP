@@ -14,4 +14,7 @@
     <string name="settings_two">修改密码</string>
     <string name="settings_three">版本更新</string>
     <string name="settings_four">关于</string>
+    <string name="punch_two">2021年金融专业学校排名</string>
+    <string name="punch_three">2021年职业就业程度统计</string>
+    <string name="title_activity_list" />
 </resources>

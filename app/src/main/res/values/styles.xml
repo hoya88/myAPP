@@ -12,4 +12,9 @@
     <style name="login_icon"></style>
 
     <style name="img_arrow"></style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorOnPrimary">@color/teal_700</item>
+        <item name="colorButtonNormal">#FF6170EE</item>
+    </style>
 </resources>

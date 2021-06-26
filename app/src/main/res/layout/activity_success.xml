@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="125dp"
-    tools:context=".MainActivity"
-    >
+    tools:context=".SuccessActivity">
 
     <TextView
         android:layout_width="match_parent"

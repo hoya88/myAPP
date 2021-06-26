@@ -37,6 +37,8 @@ public class punchFragment extends Fragment {
 
         list = new ArrayList<>();
         list.add(getString(R.string.punch_one));
+        list.add(getString(R.string.punch_two));
+        list.add(getString(R.string.punch_three));
 
         List<HashMap<String, Object>> data = new ArrayList<HashMap<String,Object>>();
         for(int i = 0; i < list.size(); i++) {
@@ -53,8 +55,7 @@ public class punchFragment extends Fragment {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getActivity(),"修改个人信息",Toast.LENGTH_SHORT).show();
-                Bundle args = new Bundle();
+                Toast.makeText(getActivity(),"展示内容",Toast.LENGTH_SHORT).show();
 
                 getActivity().startActivityForResult(new Intent(getActivity(),InformationActivity.class),1);
             }

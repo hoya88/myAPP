@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@drawable/commom_top"
+        android:background="@drawable/bg8"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="0dp"
         tools:ignore="MissingConstraints">
@@ -17,19 +18,16 @@
         <ImageView
             android:id="@+id/h_back"
             android:layout_width="match_parent"
-            android:layout_height="200dp" />
+            android:layout_height="200dp"/>
 
         <ImageView
             android:id="@+id/h_head"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="60dp"
-            android:layout_marginRight="165dp"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/my_user_default" />
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/bg11" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -43,8 +41,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:text="张三"
+                android:text="Estrella"
                 android:textColor="@color/white"
+                android:textStyle="bold"
                 android:textSize="25sp" />
 
         </RelativeLayout>

@@ -5,19 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/bg5"/>
+
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/time_layout">
         <TextView
             android:id="@+id/time_set"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="您要设置的时间为:"
+            android:text="设置时间:"
             android:textSize="30dp"/>
         <EditText
             android:id="@+id/time_view"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:textSize="50sp"
@@ -35,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/time_layout"
-        android:textSize="80sp"
+        android:textSize="70sp"
         android:layout_marginTop="0dp"
         android:text=" "/>
 
@@ -45,8 +58,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/time_result"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:textSize="25dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
         android:onClick="start"
         android:text="@string/start" />
 
@@ -55,8 +68,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:textSize="25dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
         android:layout_below="@+id/start_button"
         android:onClick="stop"
         android:text="@string/stop" />
@@ -66,8 +79,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:textSize="25dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
         android:layout_below="@+id/stop_button"
         android:onClick="reset"
         android:text="@string/reset" />

@@ -19,7 +19,7 @@ import java.util.List;
 public class listFragment extends Fragment {
 
     private ListView listView;
-    private ListDBHelper mSQLiteHelper;
+    private ListDBHelper mListHelper;
     private List<ListBean> list;
     ListAdapter adapter;
 
@@ -44,25 +44,27 @@ public class listFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(),"添加清单",Toast.LENGTH_SHORT).show();
-                getActivity().startActivityForResult(new Intent(getActivity(),RecordActivity.class),1);
+                Intent intent = new Intent(getActivity(),RecordActivity.class);
+                getActivity().startActivityForResult(intent,1);
             }
         });
         return view;
     }
 
     public void initData() {
-        mSQLiteHelper = new ListDBHelper(getActivity());
+        mListHelper = new ListDBHelper(getActivity());
         showQueryData();
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ListBean listBean = list.get(position);
                 Toast.makeText(getActivity(),"修改内容",Toast.LENGTH_SHORT).show();
-                Bundle args = new Bundle();
-                args.putSerializable("id", listBean.getId());
-                args.putSerializable("content", listBean.getNotepadContent());
-                args.putSerializable("time", listBean.getNotepadTime());
-                getActivity().startActivityForResult(new Intent(getActivity(),RecordActivity.class),1);
+                Intent intent = new Intent(getActivity(),RecordActivity.class);
+                intent.putExtra("id",listBean.getId());
+                intent.putExtra("content",listBean.getNotepadContent());
+                intent.putExtra("time",listBean.getNotepadTime());
+                getActivity().startActivityForResult(intent,1);
             }
         });
 
@@ -76,7 +78,7 @@ public class listFragment extends Fragment {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 ListBean listBean = list.get(position);
-                                if (mSQLiteHelper.deleteData(listBean.getId())) {
+                                if (mListHelper.deleteData(listBean.getId())) {
                                     list.remove(position);
                                     adapter.notifyDataSetChanged();
                                     Toast.makeText(getActivity(), "删除成功", Toast.LENGTH_LONG).show();
@@ -100,8 +102,9 @@ public class listFragment extends Fragment {
         if(list!=null){
             list.clear();
         }
-        list=mSQLiteHelper.query();
-        adapter=new ListAdapter(getActivity(),list);
+
+        list = mListHelper.query();
+        adapter = new ListAdapter(getActivity(),list);
         listView.setAdapter(adapter);
     }
 
@@ -112,4 +115,5 @@ public class listFragment extends Fragment {
             showQueryData();
         }
     }
+
 }

@@ -23,7 +23,7 @@
             android:background="#FF6170EE"
             android:clickable="false"
             android:contentDescription="@string/app_name"
-            app:srcCompat="@android:drawable/ic_input_get" />
+            app:srcCompat="@android:drawable/ic_menu_agenda" />
 
         <TextView
             android:id="@+id/textView1"

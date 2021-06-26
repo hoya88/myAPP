@@ -25,6 +25,7 @@ public class InformationActivity extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.activity_information);
 
         note_back = (ImageView) findViewById(R.id.note_back);//后退键
+        note_back.setOnClickListener(this);
 
         ListView listView = findViewById(R.id.lv);
         Handler handler = new Handler() {

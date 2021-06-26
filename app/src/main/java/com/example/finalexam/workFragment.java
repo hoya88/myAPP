@@ -18,7 +18,7 @@ public class workFragment extends Fragment {
     TextView time_result;
     EditText time_view;
     Button sure,start,stop,reset;
-    private int seconds;
+    private int seconds = 3600;
     private boolean running;
     private boolean wasRunning;
 
@@ -108,7 +108,7 @@ public class workFragment extends Fragment {
                  }
                  handler.postDelayed(this, 1000);
                  if(seconds==0){
-                     Toast.makeText(getActivity(), "Time is over", Toast.LENGTH_SHORT).show();
+                     Toast.makeText(getActivity(), "时间到", Toast.LENGTH_SHORT).show();
                      running=false;
                  }
              }

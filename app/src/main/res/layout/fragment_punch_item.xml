@@ -7,7 +7,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
+        android:layout_height="35dp"
+        android:textSize="30dp"
         android:id="@+id/study" />
 </LinearLayout>

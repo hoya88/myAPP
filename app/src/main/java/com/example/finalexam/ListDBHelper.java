@@ -34,9 +34,9 @@ public class ListDBHelper extends SQLiteOpenHelper{
     }
     //删除数据
     public boolean deleteData(String id){
-        String sql=DBUtils.NOTEPAD_ID+"=?";
+        String sql = DBUtils.NOTEPAD_ID+"=?";
         //连接字符串，易错点!
-        String[] contentValuesArray=new String[]{String.valueOf(id)};
+        String[] contentValuesArray = new String[]{String.valueOf(id)};
         return sqLiteDatabase.delete(DBUtils.DATABASE_TABLE,sql,contentValuesArray)>0;
     }
     //修改数据
