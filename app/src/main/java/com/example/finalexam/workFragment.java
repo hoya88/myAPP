@@ -80,7 +80,7 @@ public class workFragment extends Fragment {
             public void onClick(View v) {
                 Toast.makeText(getActivity(), "重置计时", Toast.LENGTH_SHORT).show();
                 running = false;
-                seconds = 0;
+                seconds = 3600;
             }
         });
         if (savedInstanceState != null) {
